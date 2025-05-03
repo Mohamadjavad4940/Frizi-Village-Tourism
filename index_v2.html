@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frizi Village Tourism</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('YOUR_LOGO_URL') no-repeat center center;
+            background-size: contain;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="loading-screen">
+    <div class="logo"></div>
+</div>
+
+<div class="content">
+    <h1>Welcome to Frizi Village Tourism</h1>
+    <p>Explore the beautiful village of Frizi in Khorasan Razavi!</p>
+</div>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        }, 3000); // 3 seconds delay
+    };
+</script>
+
+</body>
+</html
