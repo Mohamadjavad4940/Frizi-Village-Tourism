@@ -1,37 +1,38 @@
-
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="گردشگری در روستای زیبای فریزی - استان خراسان رضوی">
-    <meta name="keywords" content="گردشگری, فریزی, مشهد, خراسان رضوی, روستا">
-    <meta name="author" content="Mohammadjavad Shayesteh">
-    <title>گردشگری روستای فریزی</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>روستای فریزی</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>بنام اهورا مزدای یگانه</h1>
-        <h3>By Mohammadjavad Shayesteh</h3>
-        <img src="assets/images/logo.png" alt="لوگوی سایت" class="logo">
-    </header>
-    <section class="intro">
-        <h2>خوش آمدید به روستای فریزی</h2>
-        <p>روستایی در دل کوه‌های بینالود با طبیعتی بکر، آب‌وهوایی دلچسب و مردمی مهمان‌نواز.</p>
-        <img src="assets/images/frizi1.jpg" alt="طبیعت فریزی">
-        <img src="assets/images/frizi2.jpg" alt="کوه‌های فریزی">
-    </section>
-    <section class="login">
-        <h2>ورود کاربران</h2>
-        <form>
-            <input type="text" placeholder="نام کاربری">
-            <input type="password" placeholder="رمز عبور">
-            <button type="submit">ورود</button>
-        </form>
-    </section>
-    <footer>
-        <p>به پشتیبانی ایمیل بزنید: <a href="mailto:mhdsm192@gmail.com">mhdsm192@gmail.com</a></p>
-    </footer>
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>در حال ورود به سایت...</p>
+    </div>
+    <div id="main" style="display:none;">
+        <header>
+            <h1>بنام اهورا مزدای یگانه</h1>
+            <h2>By Mohammadjavad Shayesteh</h2>
+        </header>
+        <nav>
+            <input type="text" placeholder="جستجو...">
+            <span>پرچم ایران</span>
+            <span>...</span>
+        </nav>
+        <section>
+            <h3>خوش آمدید به روستای زیبای فریزی</h3>
+            <p>اینجا می‌توانید با جاذبه‌های گردشگری، محصولات محلی و اقامتگاه‌های بوم‌گردی آشنا شوید.</p>
+        </section>
+        <footer>
+            <p>به پشتیبانی ایمیل بزنید: mhdsm192@gmail.com</p>
+        </footer>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }
+    </script>
 </body>
 </html>
